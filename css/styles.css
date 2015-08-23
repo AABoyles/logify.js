@@ -142,7 +142,7 @@ pre {
 
 /* Need for sure */
 .layout-transparent {
-  background: url('../images/transparent.jpg') center / cover;
+  background: url('../images/logs.jpg') center / cover;
 }
 .layout-transparent .mdl-layout__header,
 .layout-transparent .mdl-layout__drawer-button,
@@ -186,4 +186,14 @@ pre {
   hr {
     margin: 2em 0;
   }
+}
+
+#FutureCensus:hover{
+  text-decoration:none;
+}
+#Future{
+  color:orange;
+}
+#Census{
+  color:black;
 }
