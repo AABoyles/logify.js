@@ -6,15 +6,15 @@ $success-color: rgba(76, 175, 80, .9);
 $danger-color: rgba(244, 67, 54, .8);
 $text-color: rgba(0, 0, 0, .8);
 
-.alertify {
-  .alertify-dialog, .alertify-alert {
-    .alertify-inner {
+.logify {
+  .logify-dialog, .logify-alert {
+    .logify-inner {
       padding: $padding-base;
       background: #fff;
       box-shadow: 0 2px 4px -1px rgba(0,0,0,.14), 0 4px 5px 0 rgba(0,0,0,.098), 0 1px 10px 0 rgba(0,0,0,.084);
     }
   }
-  .alertify-message {
+  .logify-message {
     padding: $padding-base;
     margin-bottom: $padding-base;
     margin: 0;
@@ -22,12 +22,12 @@ $text-color: rgba(0, 0, 0, .8);
   }
 }
 
-.alertify-text {
+.logify-text {
   border: 1px solid #CCC;
   padding: $padding-base;
 }
 
-.alertify-button {
+.logify-button {
 
   background: transparent;
   box-sizing: border-box;
@@ -57,7 +57,7 @@ $text-color: rgba(0, 0, 0, .8);
 
 }
 
-.alertify-log {
+.logify-log {
 
   float: right;
   clear: right;
@@ -66,11 +66,11 @@ $text-color: rgba(0, 0, 0, .8);
   color: #fff;
   box-shadow: $box-shadow;
 
-  &.alertify-log-error {
+  &.logify-log-error {
     background: $danger-color;
   }
 
-  &.alertify-log-success {
+  &.logify-log-success {
     background: $success-color;
   }
 

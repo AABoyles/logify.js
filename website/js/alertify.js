@@ -1,1 +1,1 @@
-../../dist/js/alertify.js
+../../dist/js/logify.js

@@ -9,28 +9,28 @@ $log-error-border: 1px solid $log-error-border-color !default;
  * Twitter Bootstrap Look and Feel
  * Based on http://twitter.github.com/bootstrap/
  */
-.alertify-dialog {
+.logify-dialog {
   padding: 0;
 }
 
-.alertify {
-  .alertify-inner {
+.logify {
+  .logify-inner {
     text-align: left;
     background: #fff;
     border-radius: 4px;
   }
 }
 
-.alertify-message {
+.logify-message {
   padding: 15px;
   margin: 0;
 }
 
-.alertify-text-wrapper {
+.logify-text-wrapper {
   padding: 0 15px;
 }
 
-.alertify-text {
+.logify-text {
   color: #555;
   border-radius: 4px;
   padding: 8px;
@@ -39,13 +39,13 @@ $log-error-border: 1px solid $log-error-border-color !default;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 }
 
-.alertify-text:focus {
+.logify-text:focus {
   border-color: rgba(82, 168, 236, .8);
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(82, 168, 236, .6);
 }
 
-.alertify-buttons {
+.logify-buttons {
   padding: 14px 15px 15px;
   background: #F5F5F5;
   border-top: 1px solid #DDD;
@@ -54,10 +54,10 @@ $log-error-border: 1px solid $log-error-border-color !default;
   text-align: right;
 }
 
-.alertify-button,
-.alertify-button:hover,
-.alertify-button:focus,
-.alertify-button:active {
+.logify-button,
+.logify-button:hover,
+.logify-button:focus,
+.logify-button:active {
   margin-left: 10px;
   border-radius: 4px;
   font-weight: normal;
@@ -67,20 +67,20 @@ $log-error-border: 1px solid $log-error-border-color !default;
   background-image: linear-gradient(top, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0));
 }
 
-.alertify-button:focus {
+.logify-button:focus {
   outline: none;
   box-shadow: 0 0 5px #2B72D5;
 }
 
-.alertify-button:active {
+.logify-button:active {
   position: relative;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), 0 1px 2px rgba(0, 0, 0, .05);
 }
 
-.alertify-button-cancel,
-.alertify-button-cancel:hover,
-.alertify-button-cancel:focus,
-.alertify-button-cancel:active {
+.logify-button-cancel,
+.logify-button-cancel:hover,
+.logify-button-cancel:focus,
+.logify-button-cancel:active {
   text-shadow: 0 -1px 0 rgba(255, 255, 255, .75);
   background-color: #E6E6E6;
   border: 1px solid #BBB;
@@ -88,16 +88,16 @@ $log-error-border: 1px solid $log-error-border-color !default;
   background-image: linear-gradient(top, #FFF, #E6E6E6);
 }
 
-.alertify-button-cancel:hover,
-.alertify-button-cancel:focus,
-.alertify-button-cancel:active {
+.logify-button-cancel:hover,
+.logify-button-cancel:focus,
+.logify-button-cancel:active {
   background: #E6E6E6;
 }
 
-.alertify-button-ok,
-.alertify-button-ok:hover,
-.alertify-button-ok:focus,
-.alertify-button-ok:active {
+.logify-button-ok,
+.logify-button-ok:hover,
+.logify-button-ok:focus,
+.logify-button-ok:active {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
   background-color: #04C;
   border: 1px solid #04C;
@@ -106,13 +106,13 @@ $log-error-border: 1px solid $log-error-border-color !default;
   color: #FFF;
 }
 
-.alertify-button-ok:hover,
-.alertify-button-ok:focus,
-.alertify-button-ok:active {
+.logify-button-ok:hover,
+.logify-button-ok:focus,
+.logify-button-ok:active {
   background: #04C;
 }
 
-.alertify-log {
+.logify-log {
   background: #D9EDF7;
   padding: 8px 14px;
   border-radius: 4px;
@@ -121,13 +121,13 @@ $log-error-border: 1px solid $log-error-border-color !default;
   border: 1px solid #BCE8F1;
 }
 
-.alertify-log-error {
+.logify-log-error {
   color: $log-error-color;
   background: $log-error-background;
   border: $log-error-border;
 }
 
-.alertify-log-success {
+.logify-log-success {
   color: #468847;
   background: #DFF0D8;
   border: 1px solid #D6E9C6;

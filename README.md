@@ -1,30 +1,14 @@
-# Alertify.js
+# Logify.js
 
-[![build status](https://secure.travis-ci.org/alertifyjs/alertify.js.png)](http://travis-ci.org/alertifyjs/alertify.js)
-[![Bower version](https://badge.fury.io/bo/alertifyjs.svg)](http://badge.fury.io/bo/alertifyjs)
-[![Code Climate](https://codeclimate.com/github/alertifyjs/alertify.js/badges/gpa.svg)](https://codeclimate.com/github/alertifyjs/alertify.js)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/alertifyjs/alertify.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Stories in Ready](https://badge.waffle.io/alertifyjs/alertify.js.png?label=ready&title=Ready)](https://waffle.io/alertifyjs/alertify.js)
+Logify is an unobtrusive customizable JavaScript notification logging system, forked from the excellent [Alertify.js](https://github.com/alertifyjs/alertify.js)
 
-[![npm downloads](https://img.shields.io/npm/dm/localeval.svg)](https://www.npmjs.com/package/alertify.js)
-[![npm version](https://img.shields.io/npm/v/alertify.js.svg)](https://www.npmjs.com/package/alertify.js)
-[![license](https://img.shields.io/npm/l/alertify.js.svg)](https://www.npmjs.com/package/alertify.js)
-[![Dependency Status](https://david-dm.org/alertifyjs/alertify.js.svg)](https://david-dm.org/alertifyjs/alertify.js)
-[![Dev Dependency status](https://david-dm.org/alertifyjs/alertify.js/dev-status.svg)](https://david-dm.org/alertifyjs/alertify.js#info=devDependencies&view=table)
+## Why the fork?
 
-[![NPM](https://nodei.co/npm/alertify.js.png)](https://nodei.co/npm/alertify.js/)
-
-# Alertify.js
-
-Alertify is an unobtrusive customizable JavaScript notification system.
+I use Bootstrap all the time. And Bootstrap already has awesome Dialoging features. So I found myself wanting to use Alertify Logs, but not wanting to bring alertify since so much of it is devoted to the dialogs. Logify strips out all that other stuff, and just brings the excellent logs.
 
 ## Get In Touch
 
-Feel free to stop by the [Alertify.js chat room](https://gitter.im/alertifyjs/alertify.js) to ask questions, report issues, make suggestions, or just say hi.
-
-If you prefer something that's not in real-time, stop by the [Alertify.js Google Group](https://groups.google.com/forum/#!forum/alertifyjs/new) to get in touch, too.
-
-Need to get in contact with us directly? Send us an email at [inbox@alertifyjs.org](mailto:inbox@alertifyjs.org).
+Need to get in contact with me directly? Send an email to [Anthony@Boyles.cc](mailto:anthony@boyles.cc).
 
 ## Reporting Issues
 
@@ -34,12 +18,12 @@ concrete example is your best way to get our attention! Not to say that we won't
 
 ## Usage and Examples
 
-For code examples, stop by the [website at alertifyjs.org](http://alertifyjs.org/)
+For code examples, stop by the [logifyjs website](http://futurecensus.github.io/logify/)
 
 ## Credit where credit is due
 
-See all list of [contributors](https://github.com/alertifyjs/alertify.js/contributors)
+See all list of [contributors](https://github.com/logifyjs/logify.js/contributors)
 
 ## License
 
-alertify.js is licensed under [MIT](http://www.opensource.org/licenses/MIT)
+logify.js is licensed under [MIT](http://www.opensource.org/licenses/MIT)

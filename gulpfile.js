@@ -46,8 +46,8 @@ gulp.task("jshint:build", function() {
 
 gulp.task("uglify", function () {
     return gulp
-      .src(p("src/js/alertify.js"))
-      .pipe(insert({"/* style.css */": "dist/css/alertify.css"}))
+      .src(p("src/js/logify.js"))
+      .pipe(insert({"/* style.css */": "dist/css/logify.css"}))
       .pipe(uglify({ outSourceMap: false }))
       .pipe(size({ gzip: true, showFiles: true }))
       .pipe(gulp.dest(p("dist/js")));
@@ -55,9 +55,9 @@ gulp.task("uglify", function () {
 
 gulp.task("js:angular", function() {
   return gulp
-    .src(p("src/js/ngAlertify.js"))
-    .pipe(insert({"/* alertify.js */": "src/js/alertify.js"}))
-    .pipe(insert({"/* style.css */": "dist/css/alertify.css"}))
+    .src(p("src/js/ngLogify.js"))
+    .pipe(insert({"/* logify.js */": "src/js/logify.js"}))
+    .pipe(insert({"/* style.css */": "dist/css/logify.css"}))
     .pipe(uglify({ outSourceMap: false }))
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(gulp.dest(p("dist/js")));

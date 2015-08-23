@@ -1,4 +1,4 @@
-.alertify {
+.logify {
 
   font-family: inherit;
   position: fixed;
@@ -15,7 +15,7 @@
     box-sizing: border-box;
   }
 
-  .alertify-dialog, .alertify-alert {
+  .logify-dialog, .logify-alert {
 
     width: 100%;
     margin: 0 auto;
@@ -23,7 +23,7 @@
     top: 50%;
     transform: translateY(-50%);
 
-    .alertify-inner {
+    .logify-inner {
       width: 400px;
       max-width: 95%;
       margin: 0 auto;
@@ -31,38 +31,38 @@
 
   }
 
-  .alertify-buttons {
+  .logify-buttons {
     text-align: right;
   }
 
 }
 
-.alertify,
-.alertify-show,
-.alertify-log,
-.alertify-hide {
+.logify,
+.logify-show,
+.logify-log,
+.logify-hide {
   box-sizing: border-box;
   transition: all .3s cubic-bezier(.25, .8, .25, 1);
 }
 
 // Center this
-.alertify-dialog {
+.logify-dialog {
   padding: 12px;
 }
 
-.alertify-hidden {
+.logify-hidden {
   opacity: 0;
   display: none;
 }
 
-.alertify-logs {
+.logify-logs {
   position: fixed;
   z-index: 5000;
   bottom: 0;
   right: 0;
 }
 
-.alertify-log {
+.logify-log {
   display: block;
   margin-top: 10px;
   position: relative;
@@ -70,21 +70,21 @@
   opacity: 0;
 }
 
-.alertify-log-show {
+.logify-log-show {
   right: 0;
   opacity: 1;
 }
 
-.alertify-log-hide {
+.logify-log-hide {
   transform: translate(100%, 0);
   opacity: 0;
 }
 
-.alertify-inner {
+.logify-inner {
   text-align: center;
 }
 
-.alertify-text {
+.logify-text {
   margin-bottom: 15px;
   width: 100%;
   font-size: 100%;
