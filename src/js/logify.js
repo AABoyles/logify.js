@@ -8,22 +8,9 @@ var Logify = (function(global, undefined) {
 
     Logify = function() {
 
-        var hasCss;
-        var isopen = false;
-        var keys = { ENTER: 13, ESC: 27, SPACE: 32 };
-        var queue = [];
         var elLog;
         var transitionType;
         var transitionSupported = false;
-
-        /**
-         * Markup pieces
-         * @type {Object}
-         */
-        var dialogs = {
-            message: "<p class='logify-message'>{{message}}</p>",
-            log: "<div class='logify-log{{class}}'>{{message}}</div>"
-        };
 
         /**
          * Shorthand for document.getElementById()
@@ -187,8 +174,6 @@ var Logify = (function(global, undefined) {
              */
             init: function() {
 
-                this.injectCss();
-
                 if ($("logify-logs") === null) {
                     elLog = document.createElement("div");
                     elLog.setAttribute("id", "logify-logs");
@@ -273,17 +258,6 @@ var Logify = (function(global, undefined) {
               this.promptPlaceholder = "";
               this.delay = this.defaultDelay;
               this.setCloseLogOnClick(this.closeLogOnClickDefault);
-            },
-
-            injectCss: function() {
-              if (! hasCss) {
-                var head = document.getElementsByTagName("head")[0];
-                var css = document.createElement("style");
-                css.type = "text/css";
-                css.innerHTML = "/* style.css */";
-                head.insertBefore(css, head.firstChild);
-                hasCss = true;
-              }
             }
         };
 
