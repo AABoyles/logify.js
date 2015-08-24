@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.3/material.teal-cyan.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/logify.css" type="text/css" id="logify-theme" />
     <link rel="stylesheet" id="toggleCSS" />
   </head>
   <body>
@@ -276,108 +277,16 @@ setTimeout(function() {
             <div class="mdl-grid" id="themes">
               <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-desktop left-col">
                 <h3 class="mdl-typeography--display-2">Themes</h3>
-                <p>
-                  There is no need to insert any CSS at all to use the default theme.
-                  It's bundled with the main JavaScript file.
-                </p>
-                <p>
-                  But Logify is easily themeable!
-                </p>
+                <p>Logify ships with three CSS themes:</p>
+                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="default-theme">Default</a><br /><br />
+                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="bootstrap-theme" href="#">Bootstrap</a><br /><br />
+                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="bootstrap3-theme" href="#">Bootstrap-3</a>
               </div>
               <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-desktop right-col">
                 <h5 class="mdl-typeography--headline">Theme CSS</h5>
-                <p>This is the default CSS. It gets inserted before any other CSS, so any file you include (or style you put inline) can overwrite these.</p>
-<pre>
-.logify,.logify *,.logify-button {
-  box-sizing:border-box;
-}
-
-.logify {
-  font-family:inherit;
-  position:fixed;
-  background-color:rgba(0,0,0,.6);
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  z-index:99999;
-}
-
-.logify,.logify-hide,.logify-log,.logify-show {
-  box-sizing:border-box;
-  -webkit-transition:all .3s cubic-bezier(.25,.8,.25,1);
-  transition:all .3s cubic-bezier(.25,.8,.25,1);
-}
-
-.logify-hidden {
-  opacity:0;
-  display:none;
-}
-
-.logify-logs {
-  position:fixed;
-  z-index:5000;
-  bottom:0;
-  right:0;
-}
-
-.logify-log {
-  display:block;
-  margin-top:10px;
-  position:relative;
-  right:-100%;
-  opacity:0;
-}
-
-.logify-log-show {
-  right:0;
-  opacity:1;
-}
-
-.logify-log-hide {
-  -webkit-transform:translate(100%,0);
-  -ms-transform:translate(100%,0);
-  transform:translate(100%,0);
-  opacity:0;
-}
-
-.logify-inner {
-  text-align:center;
-}
-
-.logify-text {
-  margin-bottom:15px;
-  width:100%;
-  font-size:100%;
-  border:1px solid #CCC;
-  padding:12px;
-}
-
-.logify .logify-message {
-  padding:12px;
-  margin:0;
-  text-align:left;
-}
-
-.logify-log {
-  float:right;
-  clear:right;
-  background:rgba(0,0,0,.8);
-  padding:12px 24px;
-  color:#fff;
-  box-shadow:0 2px 5px 0 rgba(0,0,0,.26);
-}
-
-.logify-log.logify-log-error {
-  background:rgba(244,67,54,.8);
-}
-
-.logify-log.logify-log-success {
-  background:rgba(76,175,80,.9);
-}
-                </pre>
+                <p>
+                  But Logify is easily themeable! Feel free to fork one of those and roll your own!
+                </p>
               </div>
             </div>
           </div>
@@ -399,21 +308,16 @@ setTimeout(function() {
             <h2 class="mdl-typeography--display-3" id="getting-started">Hook it up!</h2>
             <div class="mdl-grid">
               <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-desktop left-col">
-                <h4 class="mdl-typeograph--headline">Notes</h4>
-                <p>
-                  Obviously, if you're installing via Bower or NPM, you'll need
-                  to include the files in the "dist" directory in your
-                  HTML for everything to work. But you knew that already.
-                </p>
-                <p>
-                  It's also worth noting that the CSS is bundled by default,
-                  so there's no need to include any stylesheets to use the
-                  default theme. It's dyamically inserted before any other
-                  &lt;link&gt; elements (like) stylesheets so it's super
-                  easy to override with your own styles.
-                </p>
+                <h4 class="mdl-typeograph--headline">Plain-Vanilla Markup</h4>
               </div>
-              <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-desktop right-col"></div>
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-desktop right-col">
+                <h4 class="mdl-typeograph--headline">In Markup</h4>
+                <p>Just include a Logify Theme somewhere in you head tag:</p>
+                <pre>&lt;link rel="stylesheet" href="path/to/css/logify.css" type="text/css" /&gt;</pre>
+                <p>...And the Javascript file wherever you normally keep your Javascript:</p>
+                <pre>&lt;script type="text/javascript" src="path/to/js/logify.js"&gt;</pre>
+                <p>...And you're set to go!</p>
+              </div>
             </div>
 
             <div class="mdl-grid">
@@ -445,10 +349,9 @@ angular
             <p>Logify.js is released under the <a href="http://opensource.org/licenses/MIT">MIT license</a>. &copy; 2015 <a id="FutureCensus" href="http://futurecensus.github.io/"><span id="Future">Future</span><span id="Census">Census</span></a>
           </div>
         </footer>
+
       </main>
     </div>
-
-
 
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

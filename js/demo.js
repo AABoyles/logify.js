@@ -127,3 +127,52 @@ $("#forever").on( "click", function (ev) {
     .log("Will stay until clicked");
 
 });
+
+$("#default-theme").on("click", function(e){
+  e.preventDefault();
+
+  reset();
+
+  //Just to be certain...
+  $("#logify-theme").attr("href", "css/logify.css");
+
+  logify.log("This is the Default Theme!");
+  logify.success("Here's a success notification!");
+  logify.error("And here's an Error message!");
+
+});
+
+
+$("#bootstrap-theme").on("click", function(e){
+  e.preventDefault();
+
+  reset();
+
+  $("#logify-theme").attr("href", "css/logify-bootstrap.css");
+
+  logify.log("This is the Bootstrap Theme!");
+  logify.success("Here's a success notification!");
+  logify.error("And here's an Error message!");
+  
+  setTimeout(function() {
+    $("#logify-theme").attr("href", "css/logify.css");
+  }, 5500);
+
+});
+
+$("#bootstrap3-theme").on("click", function(e){
+  e.preventDefault();
+
+  reset();
+
+  $("#logify-theme").attr("href", "css/logify-bootstrap-3.css");
+
+  logify.log("This is the Bootstrap Theme!");
+  logify.success("Here's a success notification!");
+  logify.error("And here's an Error message!");
+  
+  setTimeout(function() {
+    $("#logify-theme").attr("href", "css/logify.css");
+  }, 5500);
+
+});
