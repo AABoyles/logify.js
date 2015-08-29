@@ -210,6 +210,14 @@ var Logify = (function(global, undefined) {
                 this.notify(message, type, click);
 
             },
+            
+            content: function(content) {
+                if(elLog.childNodes.length==0) return;
+                if(typeof content === "undefined"){
+                    return elLog.childNodes[elLog.childNodes.length-1].innerHTML;
+                }
+                elLog.childNodes[elLog.childNodes.length-1].innerHTML = content;
+            },
 
             /**
              * Add new log message
@@ -218,7 +226,7 @@ var Logify = (function(global, undefined) {
              *
              * @param  {String} message    The message passed from the callee
              * @param  {String} type       [Optional] Type of log message
-             * @param  {Number} wait       [Optional] Time (in ms) to wait before auto-hiding
+             * @param  {Function} click    [Optional] Callback for Click event handler
              *
              * @return {undefined}
              */
@@ -254,18 +262,23 @@ var Logify = (function(global, undefined) {
 
             reset: function() {
               this.setMaxLogItems();
-              this.promptValue = "";
-              this.promptPlaceholder = "";
               this.delay = this.defaultDelay;
               this.setCloseLogOnClick(this.closeLogOnClickDefault);
             }
         };
 
         return {
+            //Should belong to Logify Global:
             reset: function() {
                 _logify.reset();
                 return this;
             },
+            maxLogItems: function(num) {
+                _logify.setMaxLogItems(num);
+                return this;
+            },
+
+            //Should return a Log Object
             log: function(message, click) {
                 _logify.log(message, "default", click);
                 return this;
@@ -274,28 +287,34 @@ var Logify = (function(global, undefined) {
                 _logify.log(message, "success", click);
                 return this;
             },
+            warning: function(message, click) {
+                _logify.log(message, "warning", click);
+                return this;
+            },
             error: function(message, click) {
                 _logify.log(message, "error", click);
+                return this;
+            },
+            
+            //Should set default when called on Logify Global, set for instance on Logs
+            closeLogOnClick: function(bool) {
+                _logify.setCloseLogOnClick(!! bool);
                 return this;
             },
             delay: function(time) {
                 _logify.setDelay(time);
                 return this;
             },
-            placeholder: function(str) {
-                _logify.promptPlaceholder = str;
-                return this;
-            },
-            defaultValue: function(str) {
-                _logify.promptValue = str;
-                return this;
-            },
-            maxLogItems: function(num) {
-                _logify.setMaxLogItems(num);
-                return this;
-            },
-            closeLogOnClick: function(bool) {
-                _logify.setCloseLogOnClick(!! bool);
+
+            //Should belong exclusively to Log Objects
+            hide: function(){},
+            show: function(){},
+            destroy: function(){},
+            content: function(content){
+                var ret = _logify.content(content);
+                if(typeof content === "undefined"){
+                    return ret;
+                }
                 return this;
             }
         };
