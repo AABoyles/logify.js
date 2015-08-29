@@ -18,7 +18,7 @@ concrete example is your best way to get our attention! Not to say that we won't
 
 ## Usage and Examples
 
-For code examples, stop by the [logifyjs website](http://futurecensus.github.io/logify/)
+For code examples, stop by the [logifyjs website](http://futurecensus.github.io/logify.js/)
 
 ## Credit where credit is due
 
