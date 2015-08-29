@@ -8,14 +8,13 @@ test("globals set up", function () {
 });
 
 test("API options", function () {
-    expect(8)
+    expect(7);
     // methods
     deepEqual(typeof logify.reset, "function", "reset part of the API");
     deepEqual(typeof logify.log, "function", "log method part of the API");
+    deepEqual(typeof logify.content, "function", "content method part of the API");
     deepEqual(typeof logify.success, "function", "success notification part of the API");
+    deepEqual(typeof logify.warning, "function", "warning notification part of the API");
     deepEqual(typeof logify.error, "function", "error notification part of the API");
-    deepEqual(typeof logify.delay, "function", "delay part of the API");
-    deepEqual(typeof logify.placeholder, "function", "placeholder part of the API");
-    deepEqual(typeof logify.defaultValue, "function", "defaultValue part of the API");
     deepEqual(typeof logify.maxLogItems, "function", "maxLogItems part of the API");
 });
