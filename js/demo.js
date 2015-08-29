@@ -16,6 +16,16 @@ $("#click-to-close").on( "click", function (ev) {
 
 });
 
+$("#click-to-change").on( "click", function(ev) {
+
+  ev.preventDefault();
+  reset();
+
+  logify.log("Click on me!", function(){
+    logify.content("I felt that!");
+  });
+});
+
 $("#disable-click-to-close").on( "click", function (ev) {
 
   ev.preventDefault();

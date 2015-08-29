@@ -25,6 +25,7 @@
             <a class="mdl-navigation__link" href="#themes">Theming</a>
             <a class="mdl-navigation__link" href="#performance">Performance</a>
             <a class="mdl-navigation__link" href="#getting-started">Hook it up!</a>
+            <a class="mdl-navigation__link" href="test/">Tests</a>
             <a class="mdl-navigation__link" href="https://github.com/futurecensus/logify.js">View on GitHub</a>
           </nav>
         </div>
@@ -35,7 +36,7 @@
             <h1 class="text--bold-shadow mdl-typography--display-4">logify.js</h1>
             <h3 class="text--bold-shadow mdl-typography--display-2">Simple browser logs.</h3>
 
-            <a href="https://github.com/futurecensus/logify.js/archive/dist.zip"
+            <a href="https://github.com/futurecensus/logify.js/archive/master.zip"
                class="mdl-button mdl-button--large mdl-button--primary mdl-js-button mdl-button--raised mdl-js-ripple-effect">
               <i class="material-icons md-24">file_download</i>
               Download Now
@@ -182,6 +183,23 @@ logify.error("Standard log message with callback", function(event) {
 logify
   .closeLogOnClick(true)
   .log("Click me to close!");
+</pre>
+              </div>
+            </div>
+            
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-desktop left-col">
+                <h5 class="mdl-typeography--headline">Modifying a Log</h5>
+                <p></p>
+                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="click-to-change">Try It</a>
+              </div>
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-desktop right-col">
+                <h5 class="mdl-typeography--headline">Code Example</h5>
+<pre>
+logify
+  .log("Click on me!", function(){
+    logify.content("I felt that!");
+  });
 </pre>
               </div>
             </div>
